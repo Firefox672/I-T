@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    overflow-x: hidden;
+}
+
+.navbar {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+    transition: transform 0.3s ease;
+}
+
+.navbar.hidden {
+    transform: translateY(-100%);
+}
+
+.navbar-brand {
+    color: #fff;
+}
+
+.navbar-brand:hover {
+    color: #ddd;
+}
+
+.navbar .nav-link {
+    color: #fff;
+    margin-right: 15px;
+}
+
+.navbar .nav-link:hover {
+    color: #ddd;
+}
+
+.navbar .btn-outline-primary {
+    color: #fff;
+    border-color: #fff;
+}
+
+.navbar .btn-outline-primary:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+.contact-section {
+    padding: 60px 20px;
+    background-color: #444;
+    color: #fff;
+}
+
+.contact-section h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.contact-section p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.contact-section .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-section .form-control {
+    background-color: #555;
+    color: #fff;
+    border: 1px solid #666;
+}
+
+.contact-section .form-control::placeholder {
+    color: #aaa;
+}
+
+.contact-section .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.contact-section .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004080;
+}
+
+.contact-info {
+    margin-top: 20px;
+}
+
+.contact-info h3 {
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #333; /* Dark grey background */
+    color: #ffffff; /* White text for contrast */
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.8em;
+    position: relative;
+    margin-top: auto; /* Push footer to the bottom */
+}
+
+.navbar-nav {
+    margin-left: auto; /* Align navbar items to the right */
+}
+
+.navbar-nav .nav-link {
+    margin-right: 15px;
+}
+
+.navbar-nav .btn-outline-primary {
+    margin-left: 15px;
+}

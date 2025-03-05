@@ -1,0 +1,233 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background-image: url('header2.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    color: rgb(8, 10, 8);
+    padding: 20px 0;
+    position: relative;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+    text-align: left;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header h1:hover {
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+header p {
+    font-size: 1.2em;
+    margin: 10px 0 0 0;
+}
+
+header p:hover {
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+header nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+}
+
+header nav ul li {
+    margin: 0;
+}
+
+header nav ul li a {
+    color: rgb(7, 7, 8);
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+header nav ul li a:hover {
+    text-shadow: 0px 2px 4px rgba(16, 2, 2, 0.3);
+}
+
+/* Back Button Style */
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF; /* Primary color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #0056b3; /* Darker shade for hover effect */
+}
+
+main {
+    padding: 50px 20px;
+}
+
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.category-button {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-size: 1.8em;
+    padding: 60px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    width: 700px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.category-button:hover {
+    transform: scale(1.05);
+    filter: brightness(80%);
+}
+
+.category-button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.category-button span {
+    position: relative;
+    z-index: 2;
+}
+
+/* Specific Images for Buttons */
+.category-button.art-forms {
+    background-image: url('bopal_art-form1.jpg');
+}
+
+.category-button.traditional-festivals {
+    background-image: url('bopal_festival4.jpg');
+}
+
+.category-button.dance-forms {
+    background-image: url('bopal_dance-form1.jpg');
+}
+
+.category-button.music {
+    background-image: url('bopal_music-form1.jpg');
+}
+
+.category-button.traditional-clothing {
+    background-image: url('traditional-clothing3.jpg');
+}
+
+.category-button.architecture {
+    background-image: url('architecture.jpg');
+}
+
+.category-button.language {
+    background-image: url('language3.jpg');
+}
+
+footer {
+    background-color: #282828;
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .button-container {
+        grid-template-columns: 1fr;
+    }
+    
+    header h1 {
+        font-size: 1.8em;
+    }
+    
+    header p {
+        font-size: 1em;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* New CSS for displaying button names on hover */
+.category-button {
+    position: relative;
+    overflow: hidden;
+}
+
+.category-button::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+}
+
+.category-button:hover::after {
+    opacity: 1;
+}

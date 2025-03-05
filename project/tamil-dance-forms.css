@@ -1,0 +1,288 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background-image: url('header2.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    color: rgb(19, 177, 27);
+    padding: 20px 0;
+    position: relative;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+    text-align: left;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+header h1:hover {
+    /* Change this color to your preferred hover color */
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow effect on hover */
+}
+header p {
+    font-size: 1.2em;
+    margin: 10px 0 0 0;
+}
+header p:hover {
+    /* Change this color to your preferred hover color */
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow effect on hover */
+}
+header nav {
+    position: absolute;
+    top: 0; /* Aligns the navigation to the top */
+    right: 0; /* Aligns the navigation to the right */
+    padding: 20px;
+    /* Adds padding to the navigation */
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+    margin: auto; /* Increased gap between the navigation links */
+}
+
+header nav ul li {
+    margin: 0;
+}
+
+header nav ul li a {
+    color: rgb(7, 7, 8);
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Added transition for text-shadow */
+}
+
+header nav ul li a:hover {
+    /* Change this color to your preferred hover color */
+    text-shadow: 0px 2px 4px rgba(16, 2, 2, 0.3); /* Adds a subtle shadow effect on hover */
+}
+
+main {
+    padding: 50px 20px;
+}
+
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    gap: 20px;
+    justify-content: center;
+    max-width: 1000px; /* Increased max-width for wider buttons */
+    margin: 0 auto; /* Center the container */
+}
+
+.category-button {
+    display: block;
+    text-decoration: none;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-size: 1.8em;
+    padding: 60px; /* Adjusted padding for wider buttons */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    padding: 85px;
+    width: 700px; /* Ensures buttons fill the grid cell */
+    box-sizing: border-box; /* Includes padding in width calculation */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Smooth transitions */
+}
+
+.category-button:hover {
+    transform: scale(1.05); /* Zoom effect */
+    filter: brightness(80%); /* Slightly darken the image */
+}
+
+.category-button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Dark overlay for text readability */
+    z-index: 1;
+}
+
+.category-button span {
+    position: relative;
+    z-index: 2;
+}
+
+/* Specific Images for Buttons */
+.category-button.art-forms {
+    background-image: url('art-forms1.jpg'); /* Replace with your image path */
+}
+
+.category-button.traditional-festivals {
+    background-image: url('traditional-festivals.jpg'); /* Replace with your image path */
+}
+
+.category-button.dance-forms {
+    background-image: url('dance-forms.jpg'); /* Replace with your image path */
+}
+
+.category-button.music {
+    background-image: url('music.jpg'); /* Replace with your image path */
+}
+
+.category-button.art-crafts {
+    background-image: url('art-crafts.jpg'); /* Replace with your image path */
+}
+
+/* New Buttons */
+.category-button.traditional-clothing {
+    background-image: url('traditional-clothing3.jpg'); /* Replace with your image path */
+}
+
+.category-button.architecture {
+    background-image: url('architecture.jpg'); /* Replace with your image path */
+}
+
+.category-button.language {
+    background-image: url('language1.jpg'); /* Replace with your image path */
+}
+
+footer {
+    background-color: #282828;
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .button-container {
+        grid-template-columns: 1fr; /* Stack buttons on smaller screens */
+    }
+    
+    header h1 {
+        font-size: 1.8em;
+    }
+    
+    header p {
+        font-size: 1em;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px; /* Adjust the gap for smaller screens */
+    }
+}
+
+/* Additional Styles for Art Forms Page */
+.content-section {
+    padding: 50px 20px;
+    background-color: #ffffff;
+    color: #333;
+    border:1px solid black;
+}
+
+.content-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #1d72b8; /* Adjust color as needed */
+}
+
+.content-section p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.art-forms {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.art-form {
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.art-form img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.art-form h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.art-form p {
+    font-size: 1em;
+    color: #666;
+}
+
+/* Hover effect for art-form images */
+.art-form img:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    transition: transform 0.3s ease; /* Smooth transition */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+    filter: brightness(90%); /* Slightly darken the image on hover */
+}
+
+
+
+
+
+/* Add this to your art.css file */
+
+.back-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-button button {
+    background-color: #4CAF50; /* Green background */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.back-button button:hover {
+    background-color: #45a049;
+}

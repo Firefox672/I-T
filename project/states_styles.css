@@ -1,0 +1,191 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background-image: url('header2.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    color: rgb(9, 12, 9);
+    padding: 20px 0;
+    position: relative;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+    text-align: left;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header h1:hover {
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+header p {
+    font-size: 1.2em;
+    margin: 10px 0 0 0;
+}
+
+header p:hover {
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+header nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+}
+
+header nav ul li {
+    margin: 0;
+}
+
+header nav ul li a {
+    color: rgb(7, 7, 8);
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+header nav ul li a:hover {
+    text-shadow: 0px 2px 4px rgba(16, 2, 2, 0.3);
+}
+
+main {
+    padding: 50px 20px;
+}
+
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.category-button {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-size: 1.8em;
+    padding: 60px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.category-button:hover {
+    transform: scale(1.05);
+    filter: brightness(80%);
+}
+
+.category-button::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+}
+
+.category-button:hover::after {
+    opacity: 1;
+}
+
+/* Specific Images for Buttons */
+.category-button.andhra-pradesh {
+    background-image: url('andhra-pradesh1.jpg'); /* Replace with your image path */
+}
+
+.category-button.madhya-pradesh {
+    background-image: url('madhya-pradesh2.jpg'); /* Replace with your image path */
+}
+
+.category-button.tamil-nadu {
+    background-image: url('tamil-nadu1.jpg'); /* Replace with your image path */
+}
+
+.category-button.kerala {
+    background-image: url('kerala.jpg'); /* Replace with your image path */
+}
+
+.category-button.karnataka {
+    background-image: url('karnataka.jpg'); /* Replace with your image path */
+}
+
+.category-button.gujarat {
+    background-image: url('gujarat.jpg'); /* Replace with your image path */
+}
+
+.category-button.rajasthan {
+    background-image: url('rajasthan.jpg'); /* Replace with your image path */
+}
+
+footer {
+    background-color: #282828;
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .button-container {
+        grid-template-columns: 1fr; /* Stack buttons on smaller screens */
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px; /* Adjust the gap for smaller screens */
+    }
+}
