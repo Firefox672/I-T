@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Culture</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="">Indian Culture</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="nav/about-us.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="nav/contact-us.html">Contact Us</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="#">Explore</a></li> -->
+                    <li class="nav-item"><a class="nav-link btn btn-outline-primary" href="nav/adminlogin.html">Admin Login</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="toggleChatbot()">
+                            <img src="static/chatbot_icon.jpg" alt="Chatbot Icon" style="width: 44px; height: 44px; border-radius: 50%;">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="welcome-container text-center">
+        <h1>Welcome to Indian Culture</h1>
+        <p>Explore the rich heritage and vibrant traditions of India.</p>
+        <div class="detailed-data">
+            <h2>Years of Excellence</h2>
+            <p>India's rich heritage spans thousands of years, from ancient civilizations like the Indus Valley to major empires such as the Maurya, Gupta, and Mughal empires, and the impact of British colonial rule. The country is religiously diverse, with Hinduism, Buddhism, Jainism, Sikhism, Islam, and Christianity shaping its spiritual practices. Linguistically, India is home to hundreds of languages, including Hindi, Bengali, Tamil, Telugu, and Marathi, with a wealth of classical and modern literature.</p>
+            <p>Indian art and architecture are distinguished by classical dance forms, diverse music traditions, and significant monuments from ancient temples to Mughal and colonial structures. Festivals like Diwali, Holi, and Eid showcase vibrant rituals and celebrations. Cuisine varies regionally, offering dishes such as butter chicken, dosa, fish curry, and pav bhaji. Traditional clothing includes sarees for women and dhotis or kurta-pajamas for men. Renowned for its crafts, India produces exquisite textiles, pottery, and jewelry. The culture emphasizes values like respect for elders, family bonds, and principles of karma and dharma.</p>
+        </div>
+    </div>
+
+    
+    <!-- Globe Container -->
+    <div id="globe-container">
+        <div id="globe"></div>
+    </div>
+    
+    
+    <!-- Image below the globe -->
+    <div id="below-image-container">
+        <a href="project/states.html"><img src="static/India_map.jpg" alt="Below Globe Image" id="below-image"></a>
+    </div>
+    
+    <div style="height: 300px;"></div>
+    <!-- <div style="height: 2000px;"></div> -->
+
+    <!-- Chatbot Container -->
+<div class="chat-container" id="chat-container">
+    <div class="chat-header">
+        <img src="static/chatbot_icon.jpg" alt="Chatbot Avatar">
+        <span><b>Chatbot</b></span>
+        <button class="close-btn" onclick="closeChatbot()">×</button>
+    </div>
+    <div class="chat-body" id="chat-body"></div>
+    <div class="chat-footer">
+        <textarea id="user-input" placeholder="Type your message here..."></textarea>
+        <button onclick="sendMessage()">Send</button>
+        <img id="voice-icon" class="voice-icon" src="static/mic_icon.png" alt="Mic Icon">
+    </div>
+</div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="static/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
