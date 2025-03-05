@@ -24,7 +24,7 @@ function init() {
     const textureLoader = new THREE.TextureLoader();
     const globeGeometry = new THREE.SphereGeometry(5, 32, 32);
     const globeMaterial = new THREE.MeshStandardMaterial({
-        map: textureLoader.load('/Earth color.png'),
+        map: textureLoader.load('Earth color.png'),
         transparent: true,
     });
 
@@ -156,7 +156,7 @@ function stopVoiceInteraction() {
     if (listening) {
         recognition.stop(); // Stop ongoing voice recognition
         listening = false;
-        document.getElementById('voice-icon').src = '/mic_icon.png'; // Reset mic icon
+        document.getElementById('voice-icon').src = 'mic_icon.png'; // Reset mic icon
     }
 }
 
@@ -239,14 +239,14 @@ recognition.onspeechend = function() {
     if (listening) {
         recognition.stop();
         listening = false;
-        document.getElementById('voice-icon').src = '/mic_icon.png'; // Reset mic icon
+        document.getElementById('voice-icon').src = 'mic_icon.png'; // Reset mic icon
     }
 };
 
 recognition.onerror = function(event) {
     console.error('Speech recognition error detected: ' + event.error);
     listening = false;
-    document.getElementById('voice-icon').src = '/mic_icon.png'; // Reset mic icon
+    document.getElementById('voice-icon').src = 'mic_icon.png'; // Reset mic icon
     appendMessage("Sorry, something went wrong.", 'bot');
 };
 
@@ -255,7 +255,7 @@ document.getElementById('voice-icon').addEventListener('click', function() {
     if (listening) {
         recognition.stop();
         listening = false;
-        document.getElementById('voice-icon').src = '/mic_icon.png'; // Reset mic icon
+        document.getElementById('voice-icon').src = 'mic_icon.png'; // Reset mic icon
     } else {
         if (speechSynthesisActive) {
             window.speechSynthesis.cancel(); // Stop ongoing speech if any
@@ -263,7 +263,7 @@ document.getElementById('voice-icon').addEventListener('click', function() {
         appendMessage("Hearing...", 'bot'); // Display hearing message
         recognition.start();
         listening = true;
-        document.getElementById('voice-icon').src = '/mic_icon_active.png'; // Change mic icon
+        document.getElementById('voice-icon').src = 'mic_icon_active.png'; // Change mic icon
     }
 });
 
